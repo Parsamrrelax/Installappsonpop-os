@@ -6,24 +6,49 @@ echo "UPDATE COMPLETE"
 # echo "UPGRADE COMPLETE"
 
 #Apps Installing
-sudo apt-get --yes install mpv
+sudo apt-get install --yes mpv
 echo "MPV INSTALLED"
 
-sudo apt install --yes flameshot
+sudo apt-get install --yes flameshot
 echo "FLAMESHOT INSTALLED"
 
-sudo apt install --yes gimp
+sudo apt-get install --yes gimp
 echo "GIMP INSTALLED"
 
-sudo apt install --yes telegram-desktop
+sudo apt-get install --yes telegram-desktop
 echo "TELEGRAM INSTALLED"
 
+sudo apt-get install --yes vlc
+echo "VLC INSTALLED"
+
+
+sudo apt-get install --yes github-desktop
+echo "GITHUB DESKTOP INSTALLED"
+
+
 #System edits
+
+#add fonts
 mkdir /home/parsa/.fonts
 cp '/home/parsa/Installappsonpop-os/Downloading files/MesloLGS NF Bold Italic.ttf' '/home/parsa/Installappsonpop-os/Downloading files/MesloLGS NF Bold.ttf' '/home/parsa/Installappsonpop-os/Downloading files/MesloLGS NF Italic.ttf' '/home/parsa/Installappsonpop-os/Downloading files/MesloLGS NF Regular.ttf' /home/parsa/.fonts/
 fc-cache -fv
 echo "NEW FONTS ADDED"
 
+#Add Vpn
 chmox +x Outline-Client.Appimage
 echo "OUTLINE INSTALLED"
+
+#Add persian keyboard
+gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'ir')]"
+echo "PERSIAN LANGUAGE KEYBOARD ADDED"
+
+#Install Vscodium
+wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
+    | gpg --dearmor \
+    | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
+
+echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
+    | sudo tee /etc/apt/sources.list.d/vscodium.list
+
+sudo apt-get update --yes && sudo apt-get install --yes codium
 
