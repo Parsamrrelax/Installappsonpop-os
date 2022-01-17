@@ -21,9 +21,12 @@ echo "TELEGRAM INSTALLED"
 sudo apt-get install --yes vlc
 echo "VLC INSTALLED"
 
-
 sudo apt-get install --yes github-desktop
 echo "GITHUB DESKTOP INSTALLED"
+
+sudo apt-get install --yes copyq
+echo "COPYQ INSTALLED"
+
 
 
 #System edits
@@ -52,3 +55,9 @@ echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https:/
 
 sudo apt-get update --yes && sudo apt-get install --yes codium
 
+#Add Fan Control
+sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw/etc/isw.conf' '/etc/'
+sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw/etc/modprobe.d/isw-ec_sys.conf' '/etc/modprobe.d/'
+sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw/etc/modules-load.d/isw-ec_sys.conf' '/etc/modules-load.d/'
+sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw/usr/lib/systemd/system/isw@.service' '/usr/lib/systemd/system/'
+sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw/isw' '/usr/bin/'
