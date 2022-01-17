@@ -27,6 +27,21 @@ echo "GITHUB DESKTOP INSTALLED"
 sudo apt-get install --yes copyq
 echo "COPYQ INSTALLED"
 
+sudo apt-get install --yes qbittorrent
+echo "QBITTORRENT INSTALLED"
+
+flatpak install -y jdownloader
+echo "JDOWNLOADER INSTALLED"
+
+sudo add-apt-repository --yes ppa:gnumdk/lollypop
+sudo apt-get --yes update
+sudo apt-get install --yes lollypop
+echo "LOLLYPOP INSTALLED"
+
+sudo apt-get install --yes gnome-tweaks
+echo "GNOME TWEAKS INSTALLED"
+
+
 
 
 #System edits
@@ -56,8 +71,8 @@ echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https:/
 sudo apt-get update --yes && sudo apt-get install --yes codium
 
 #Add Fan Control
-sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw/etc/isw.conf' '/etc/'
-sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw/etc/modprobe.d/isw-ec_sys.conf' '/etc/modprobe.d/'
-sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw/etc/modules-load.d/isw-ec_sys.conf' '/etc/modules-load.d/'
-sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw/usr/lib/systemd/system/isw@.service' '/usr/lib/systemd/system/'
-sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw/isw' '/usr/bin/'
+sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw.conf' '/etc/'
+sudo cp '/home/parsa/Installappsonpop-os/Downloading files//modprobe.d/isw-ec_sys.conf' '/etc/modprobe.d/'
+sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw-ec_sys.conf' '/etc/modules-load.d/'
+sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw@.service' '/usr/lib/systemd/system/'
+sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw' '/usr/bin/'
