@@ -76,3 +76,10 @@ sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw-ec_sys2.conf' '/e
 sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw-ec_sys.conf' '/etc/modules-load.d/'
 sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw@.service' '/usr/lib/systemd/system/'
 sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw' '/usr/bin/'
+
+#Themes
+git clone https://github.com/vinceliuice/Graphite-gtk-theme
+cd Graphite-gtk-theme
+./install.sh
+quit
+echo "GRAPHITE THEME INSTALLED"
