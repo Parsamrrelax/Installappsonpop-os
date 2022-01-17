@@ -72,7 +72,7 @@ sudo apt-get update --yes && sudo apt-get install --yes codium
 
 #Add Fan Control
 sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw.conf' '/etc/'
-sudo cp '/home/parsa/Installappsonpop-os/Downloading files//modprobe.d/isw-ec_sys.conf' '/etc/modprobe.d/'
+sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw-ec_sys2.conf' '/etc/modprobe.d/isw-ec_sys.conf'
 sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw-ec_sys.conf' '/etc/modules-load.d/'
 sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw@.service' '/usr/lib/systemd/system/'
 sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw' '/usr/bin/'
