@@ -26,33 +26,117 @@ FLAMESHOT INSTALLED
 "
 
 sudo apt-get install --yes gimp
-echo "GIMP INSTALLED"
+echo "
+
+
+
+
+GIMP INSTALLED
+
+
+
+
+"
 
 sudo apt-get install --yes telegram-desktop
-echo "TELEGRAM INSTALLED"
+echo "
+
+
+
+
+TELEGRAM INSTALLED
+
+
+
+
+"
 
 sudo apt-get install --yes vlc
-echo "VLC INSTALLED"
+echo "
+
+
+
+
+VLC INSTALLED
+
+
+
+
+"
 
 sudo apt-get install --yes github-desktop
-echo "GITHUB DESKTOP INSTALLED"
+echo "
+
+
+
+
+GITHUB DESKTOP INSTALLED
+
+
+
+
+"
 
 sudo apt-get install --yes copyq
-echo "COPYQ INSTALLED"
+echo "
+
+
+
+COPYQ INSTALLED
+
+
+
+"
 
 sudo apt-get install --yes qbittorrent
-echo "QBITTORRENT INSTALLED"
+echo "
+
+
+
+
+QBITTORRENT INSTALLED
+
+
+
+"
 
 flatpak install -y jdownloader
-echo "JDOWNLOADER INSTALLED"
+echo "
+
+
+
+
+JDOWNLOADER INSTALLED
+
+
+
+
+"
 
 sudo add-apt-repository --yes ppa:gnumdk/lollypop
 sudo apt-get --yes update
 sudo apt-get install --yes lollypop
-echo "LOLLYPOP INSTALLED"
+echo "
+
+
+
+LOLLYPOP INSTALLED
+
+
+
+"
 
 sudo apt-get install --yes gnome-tweaks
-echo "GNOME TWEAKS INSTALLED"
+echo "
+
+
+
+GNOME TWEAKS INSTALLED
+
+
+
+
+"
 
 
 
@@ -95,7 +179,18 @@ git clone https://github.com/vinceliuice/Graphite-gtk-theme
 cd Graphite-gtk-theme
 ./install.sh
 quit
-echo "GRAPHITE THEME INSTALLED"
+echo "
+
+
+
+
+
+GRAPHITE THEME INSTALLED
+
+
+
+
+"
 
 #Add Graphite Theme to Flatpak Apps
 sudo flatpak override --filesystem=$HOME/.themes
