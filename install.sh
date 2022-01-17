@@ -7,10 +7,23 @@ echo "UPDATE COMPLETE"
 
 #Apps Installing
 sudo apt-get install --yes mpv
-echo "MPV INSTALLED"
+echo "
+
+
+MPV INSTALLED
+
+
+"
 
 sudo apt-get install --yes flameshot
-echo "FLAMESHOT INSTALLED"
+echo "
+
+
+FLAMESHOT INSTALLED
+
+
+
+"
 
 sudo apt-get install --yes gimp
 echo "GIMP INSTALLED"
@@ -83,3 +96,7 @@ cd Graphite-gtk-theme
 ./install.sh
 quit
 echo "GRAPHITE THEME INSTALLED"
+
+#Add Graphite Theme to Flatpak Apps
+sudo flatpak override --filesystem=$HOME/.themes
+sudo flatpak override --env=GTK_THEME=Graphite-dark
