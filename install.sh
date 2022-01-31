@@ -139,8 +139,66 @@ GNOME TWEAKS INSTALLED
 "
 
 
+sudo apt-get install --yes xpad
+echo "
 
 
+
+
+
+XPAD INSTALLED
+
+
+
+
+
+"
+
+
+sudo apt-get install --yes wine
+echo "
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+WINE INSTALLED
+
+
+
+
+
+
+"
+
+
+sudo apt-get install --yes lutris
+echo "
+
+
+
+
+
+LUTRIS INSTALLED
+
+
+
+
+
+
+"
 #System edits
 
 #add fonts
@@ -195,3 +253,23 @@ GRAPHITE THEME INSTALLED
 #Add Graphite Theme to Flatpak Apps
 sudo flatpak override --filesystem=$HOME/.themes
 sudo flatpak override --env=GTK_THEME=Graphite-dark
+
+
+
+sudo apt-get install --yes ttf-mscorefonts-installer
+echo "
+
+
+
+
+
+
+
+
+MS FONTS INSTALLED
+
+
+
+
+
+"
