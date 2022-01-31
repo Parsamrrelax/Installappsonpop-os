@@ -236,7 +236,7 @@ sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw' '/usr/bin/'
 git clone https://github.com/vinceliuice/Graphite-gtk-theme
 cd Graphite-gtk-theme
 ./install.sh
-quit
+cd ~
 echo "
 
 
@@ -273,3 +273,18 @@ MS FONTS INSTALLED
 
 
 "
+git clone https://github.com/Parsamrrelax/MSIKLM
+cd MSIKLM
+./install.sh
+echo "
+
+
+
+
+KEYBOARD LIGHT MANAGER INSTALLED
+
+
+
+
+"
+cd ~
