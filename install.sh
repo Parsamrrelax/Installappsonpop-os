@@ -199,6 +199,39 @@ LUTRIS INSTALLED
 
 
 "
+sudo apt-get install --yes audacity
+echo "
+
+
+
+
+
+AUDACITY INSTALLED
+
+
+
+
+
+
+"
+sudo apt-get install --yes python3-pip
+echo "
+
+
+
+
+
+
+
+
+PYTHON PIP INSTALLED
+
+
+
+
+
+
+"
 #System edits
 
 #add fonts
@@ -288,3 +321,26 @@ KEYBOARD LIGHT MANAGER INSTALLED
 
 "
 cd ~
+sudo pip install undervolt
+echo "
+
+
+
+
+
+UNDERVOLT INSTALLED
+
+
+
+
+
+"
+sudo undervolt --core -100 --cache -100
+sudo apt-get install --yes msr-tools
+#rdmsr -p4 0x1a0 -f 38:38
+#For checking turbo boost
+# sudo chmod +x turbo-boost.sh
+# ./turbo-boost.sh disable
+# ./turbo-boost.sh enable
+
+
