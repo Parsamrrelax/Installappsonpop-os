@@ -1,9 +1,23 @@
 #hello
+
+sudo add-apt-repository ppa:apt-fast/stable
+sudo apt-get update
+sudo apt-get -y install apt-fast
+echo "
+
+
+
+
+PARALLEL DOWNLOADING ENABLED
+
+
+"
+
 sudo apt update
 echo "UPDATE COMPLETE"
 
-# sudo apt upgrade
-# echo "UPGRADE COMPLETE"
+sudo apt full-upgrade
+echo "UPGRADE COMPLETE"
 
 #Apps Installing
 sudo apt-get install --yes mpv
