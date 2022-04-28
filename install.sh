@@ -250,7 +250,7 @@ PYTHON PIP INSTALLED
 
 #add fonts
 mkdir /home/parsa/.fonts
-cp '/home/parsa/Installappsonpop-os/Downloading files/MesloLGS NF Bold Italic.ttf' '/home/parsa/Installappsonpop-os/Downloading files/MesloLGS NF Bold.ttf' '/home/parsa/Installappsonpop-os/Downloading files/MesloLGS NF Italic.ttf' '/home/parsa/Installappsonpop-os/Downloading files/MesloLGS NF Regular.ttf' /home/parsa/.fonts/
+sudo cp ~/installappsonpop-os/Downloading\ files/MesloLGS\ NF\ Bold\ Italic.ttf ~/installappsonpop-os/Downloading\ files/MesloLGS\ NF\ Bold.ttf ~/installappsonpop-os/Downloading\ files/MesloLGS\ NF\ Italic.ttf ~/installappsonpop-os/Downloading\ files/MesloLGS\ NF\ Regular.ttf /home/parsa/.fonts/
 fc-cache -fv
 echo "NEW FONTS ADDED"
 
@@ -262,22 +262,42 @@ echo "OUTLINE INSTALLED"
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'ir')]"
 echo "PERSIAN LANGUAGE KEYBOARD ADDED"
 
+
+#Install snapd
+sudo apt-get install --yes snapd
+
+echo'
+
+
+
+
+SNAPD INSTALLED
+
+
+
+
+'
 #Install Vscodium
-wget -qO - https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg \
-    | gpg --dearmor \
-    | sudo dd of=/usr/share/keyrings/vscodium-archive-keyring.gpg
+snap install codium --classic
 
-echo 'deb [ signed-by=/usr/share/keyrings/vscodium-archive-keyring.gpg ] https://download.vscodium.com/debs vscodium main' \
-    | sudo tee /etc/apt/sources.list.d/vscodium.list
 
-sudo apt-get update --yes && sudo apt-get install --yes codium
+
+echo'
+
+
+
+VSCODIUM INSTALLED
+
+
+
+'
 
 #Add Fan Control
-sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw.conf' '/etc/'
-sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw-ec_sys2.conf' '/etc/modprobe.d/isw-ec_sys.conf'
-sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw-ec_sys.conf' '/etc/modules-load.d/'
-sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw@.service' '/usr/lib/systemd/system/'
-sudo cp '/home/parsa/Installappsonpop-os/Downloading files/isw' '/usr/bin/'
+sudo cp ~/installappsonpop-os/Downloading\ files/isw.conf '/etc/'
+sudo cp ~/installappsonpop-os/Downloading\ files/isw-ec_sys2.conf '/etc/modprobe.d/isw-ec_sys.conf'
+sudo cp ~/installappsonpop-os/Downloading\ files/isw-ec_sys.conf '/etc/modules-load.d/'
+sudo cp ~/installappsonpop-os/Downloading\ files/isw@.service '/usr/lib/systemd/system/'
+sudo cp ~/installappsonpop-os/Downloading\ files/isw '/usr/bin/'
 
 #Themes
 git clone https://github.com/vinceliuice/Graphite-gtk-theme
