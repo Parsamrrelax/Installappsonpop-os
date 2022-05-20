@@ -28,6 +28,32 @@ MPV INSTALLED
 
 
 "
+sudo apt-get install --yes git
+echo "
+
+
+
+
+GIT INSTALLED 
+
+
+
+
+"
+git clone https://github.com/Parsamrrelax/dotfiles
+mv ~/dotfiles/* ~
+echo "
+
+
+
+
+
+CONFIG FILES UPDATED
+
+
+
+
+"
 
 sudo apt-get install --yes flameshot
 echo "
@@ -162,6 +188,18 @@ echo "
 
 XPAD INSTALLED
 
+
+
+
+
+"
+snap install chezmoi --classic
+echo "
+
+
+
+
+CHEZMOI INSTALLED
 
 
 
@@ -390,6 +428,8 @@ SUBLIME TEXT EDITOR INSTALLED
 
 
 "
+
+
 
 
 sudo undervolt --core -100 --cache -100
