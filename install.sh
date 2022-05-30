@@ -152,6 +152,19 @@ JDOWNLOADER INSTALLED
 
 
 "
+sudo apt-get install --yes btop
+echo "
+
+
+
+
+
+BTOP INSTALLED
+
+
+
+
+"
 
 sudo add-apt-repository --yes ppa:gnumdk/lollypop
 sudo apt-get --yes update
