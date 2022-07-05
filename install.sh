@@ -235,7 +235,19 @@ WINE INSTALLED
 
 
 "
+sudo apt install -y filezilla
+echo '
 
+
+
+
+
+FILEZILLA INSTALLED
+
+
+
+
+'
 
 sudo apt install -y lutris
 echo "
@@ -433,9 +445,10 @@ sudo dpkg --install obsidian_0.14.15_amd64.deb
 sudo dpkg --install nordvpn-release_1.0.0_all.deb
 cd ~
 sudo apt update
-sudo apt install nordvpn
+sudo apt install -y nordvpn
 
 #Installing Kodi
 sudo apt install software-properties-common
 sudo add-apt-repository -y ppa:team-xbmc/ppa
-sudo apt install kodi
+sudo apt install -y kodi
+
