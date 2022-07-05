@@ -1,17 +1,5 @@
 #hello
 
-sudo add-apt-repository ppa:apt-fast/stable
-sudo apt-get update
-sudo apt-get -y install apt-fast
-echo "
-
-
-
-
-PARALLEL DOWNLOADING ENABLED
-
-
-"
 
 sudo apt update
 echo "UPDATE COMPLETE"
@@ -20,7 +8,7 @@ sudo apt full-upgrade
 echo "UPGRADE COMPLETE"
 
 #Apps Installing
-sudo apt-get install --yes mpv
+sudo apt install -y mpv
 echo "
 
 
@@ -28,7 +16,7 @@ MPV INSTALLED
 
 
 "
-sudo apt-get install --yes git
+sudo apt install -y git
 echo "
 
 
@@ -55,7 +43,7 @@ CONFIG FILES UPDATED
 
 "
 
-sudo apt-get install --yes flameshot
+sudo apt install -y flameshot
 echo "
 
 
@@ -65,7 +53,7 @@ FLAMESHOT INSTALLED
 
 "
 
-sudo apt-get install --yes gimp
+sudo apt install -y gimp
 echo "
 
 
@@ -78,7 +66,7 @@ GIMP INSTALLED
 
 "
 
-sudo apt-get install --yes telegram-desktop
+sudo apt install -y telegram-desktop
 echo "
 
 
@@ -91,7 +79,7 @@ TELEGRAM INSTALLED
 
 "
 
-sudo apt-get install --yes vlc
+sudo apt install -y vlc
 echo "
 
 
@@ -104,7 +92,7 @@ VLC INSTALLED
 
 "
 
-sudo apt-get install --yes github-desktop
+sudo apt install -y github-desktop
 echo "
 
 
@@ -117,7 +105,7 @@ GITHUB DESKTOP INSTALLED
 
 "
 
-sudo apt-get install --yes copyq
+sudo apt install -y copyq
 echo "
 
 
@@ -128,7 +116,7 @@ COPYQ INSTALLED
 
 "
 
-sudo apt-get install --yes qbittorrent
+sudo apt install -y qbittorrent
 echo "
 
 
@@ -152,7 +140,7 @@ JDOWNLOADER INSTALLED
 
 
 "
-sudo apt-get install --yes btop
+sudo apt install -y btop
 echo "
 
 
@@ -166,9 +154,9 @@ BTOP INSTALLED
 
 "
 
-sudo add-apt-repository --yes ppa:gnumdk/lollypop
-sudo apt-get --yes update
-sudo apt-get install --yes lollypop
+sudo add-apt-repository -y ppa:gnumdk/lollypop
+sudo apt -y update
+sudo apt install -y lollypop
 echo "
 
 
@@ -179,7 +167,7 @@ LOLLYPOP INSTALLED
 
 "
 
-sudo apt-get install --yes gnome-tweaks
+sudo apt install -y gnome-tweaks
 echo "
 
 
@@ -192,7 +180,7 @@ GNOME TWEAKS INSTALLED
 "
 
 
-sudo apt-get install --yes xpad
+sudo apt install -y xpad
 echo "
 
 
@@ -206,7 +194,7 @@ XPAD INSTALLED
 
 
 "
-snap install chezmoi --classic
+sh -c "$(curl -fsLS chezmoi.io/get)"
 echo "
 
 
@@ -220,7 +208,7 @@ CHEZMOI INSTALLED
 "
 
 
-sudo apt-get install --yes wine
+sudo apt install -y wine
 echo "
 
 
@@ -249,7 +237,7 @@ WINE INSTALLED
 "
 
 
-sudo apt-get install --yes lutris
+sudo apt install -y lutris
 echo "
 
 
@@ -264,7 +252,7 @@ LUTRIS INSTALLED
 
 
 "
-sudo apt-get install --yes audacity
+sudo apt install -y audacity
 echo "
 
 
@@ -279,7 +267,7 @@ AUDACITY INSTALLED
 
 
 "
-sudo apt-get install --yes python3-pip
+sudo apt install -y python3-pip
 echo "
 
 
@@ -313,27 +301,11 @@ echo "OUTLINE INSTALLED"
 gsettings set org.gnome.desktop.input-sources sources "[('xkb', 'us'), ('xkb', 'ir')]"
 echo "PERSIAN LANGUAGE KEYBOARD ADDED"
 
-
-#Install snapd
-sudo apt-get install --yes snapd
-
-echo'
-
-
-
-
-SNAPD INSTALLED
-
-
-
-
-'
 #Install Vscodium
-snap install codium --classic
+flatpak install flathub com.vscodium.codium 
 
 
-
-echo'
+echo '
 
 
 
@@ -374,7 +346,7 @@ sudo flatpak override --env=GTK_THEME=Graphite-dark
 
 
 
-sudo apt-get install --yes ttf-mscorefonts-installer
+sudo apt install -y ttf-mscorefonts-installer
 echo "
 
 
@@ -422,10 +394,10 @@ UNDERVOLT INSTALLED
 "
 
 wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
-sudo apt-get install apt-transport-https
+sudo apt install apt-transport-https
 echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
-sudo apt-get update
-sudo apt-get install sublime-text
+sudo apt update
+sudo apt install sublime-text
 
 echo "
 
@@ -446,7 +418,7 @@ SUBLIME TEXT EDITOR INSTALLED
 
 
 sudo undervolt --core -100 --cache -100
-sudo apt-get install --yes msr-tools
+sudo apt install -y msr-tools
 #rdmsr -p4 0x1a0 -f 38:38
 #For checking turbo boost
 # sudo chmod +x turbo-boost.sh
