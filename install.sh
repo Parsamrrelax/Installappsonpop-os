@@ -425,4 +425,17 @@ sudo apt install -y msr-tools
 # ./turbo-boost.sh disable
 # ./turbo-boost.sh enable
 
+#Installing appimagelauncher anydesk obsidian nordvpn repo
+cd ~/Installappsonpop-os/Downloading\ files/
+sudo dpkg --install appimagelauncher.deb
+sudo dpkg --install anydesk_6.1.1-1_amd64.deb
+sudo dpkg --install obsidian_0.14.15_amd64.deb
+sudo dpkg --install nordvpn-release_1.0.0_all.deb
+cd ~
+sudo apt update
+sudo apt install nordvpn
 
+#Installing Kodi
+sudo apt install software-properties-common
+sudo add-apt-repository -y ppa:team-xbmc/ppa
+sudo apt install kodi
