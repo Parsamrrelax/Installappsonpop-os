@@ -326,13 +326,64 @@ VSCODIUM INSTALLED
 
 
 '
+#install cava
+sudo apt install -y cava
+echo '
 
+
+
+
+CAVA INSTALLED
+
+
+
+'
+#install spotify
+curl -sS https://download.spotify.com/debian/pubkey_5E3C45D7B312C643.gpg | sudo apt-key add - 
+echo "deb http://repository.spotify.com stable non-free" | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update && sudo apt-get install spotify-client
+echo '
+
+
+
+
+SPOTIFY INSTALLED
+
+
+
+'
+#spicetify
+curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-cli/master/install.sh | sh
+curl -fsSL https://raw.githubusercontent.com/spicetify/spicetify-marketplace/main/resources/install.sh | sh
+cd ~
+git clone https://github.com/spicetify/spicetify-themes
+cd spicetify-themes
+cp -r * ~/.config/spicetify/Themes
+cp -r * ~/.spicetify/Themes
+cd ~/.spicetify
+./spicetify backup apply enable-devtool
+#preview available themes
+#https://github.com/morpheusthewhite/spicetify-themes/blob/master/THEMES.md
+#spicetify config current_theme THEME_NAME
+#spicetify config color_scheme SCHEME_NAME
+#spicetify apply
+cd ~
+echo '
+
+
+
+SPICETIFY INSTALLED
+
+
+
+
+'
 #Add Fan Control
-sudo cp ~/installappsonpop-os/Downloading\ files/isw.conf '/etc/'
-sudo cp ~/installappsonpop-os/Downloading\ files/isw-ec_sys2.conf '/etc/modprobe.d/isw-ec_sys.conf'
-sudo cp ~/installappsonpop-os/Downloading\ files/isw-ec_sys.conf '/etc/modules-load.d/'
-sudo cp ~/installappsonpop-os/Downloading\ files/isw@.service '/usr/lib/systemd/system/'
-sudo cp ~/installappsonpop-os/Downloading\ files/isw '/usr/bin/'
+sudo cp ~/Installappsonpop-os/Downloading\ files/isw.conf '/etc/'
+sudo cp ~/Installappsonpop-os/Downloading\ files/isw-ec_sys2.conf '/etc/modprobe.d/isw-ec_sys.conf'
+sudo cp ~/Installappsonpop-os/Downloading\ files/isw-ec_sys.conf '/etc/modules-load.d/'
+sudo cp ~/Installappsonpop-os/Downloading\ files/isw@.service '/usr/lib/systemd/system/'
+sudo cp ~/Installappsonpop-os/Downloading\ files/isw '/usr/bin/'
 
 #Themes
 git clone https://github.com/vinceliuice/Graphite-gtk-theme
@@ -452,3 +503,31 @@ sudo apt install software-properties-common
 sudo add-apt-repository -y ppa:team-xbmc/ppa
 sudo apt install -y kodi
 
+#Install Rust
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+#Install cargo
+sudo apt install -y cargo
+
+#Install spotify adblocker
+cd ~
+git clone https://github.com/abba23/spotify-adblock.git
+cd spotify-adblock
+make
+sudo make install
+#command to launch without ads
+#LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify
+cd ~
+touch ~/.local/share/applications/spotify-adblock.desktop
+# #[Desktop Entry]
+# Type=Application
+# Name=Spotify (adblock)
+# GenericName=Music Player
+# Icon=spotify-client
+# TryExec=spotify
+# Exec=env LD_PRELOAD=/usr/local/lib/spotify-adblock.so spotify %U
+# Terminal=false
+# MimeType=x-scheme-handler/spotify;
+# Categories=Audio;Music;Player;AudioVideo;
+# StartupWMClass=spotify
+#add above lines without comment sign to the touched file for icon in launcher
